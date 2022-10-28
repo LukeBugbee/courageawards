@@ -123,6 +123,9 @@ h3 {
   z-index: -100;
 }
 
+.invite {
+  padding: 120px 60px;
+}
 .invite #columnTop {
   position: absolute;
   width: 180px;
@@ -187,7 +190,7 @@ h3 {
   display: flex;
   flex-direction: column;
   width: 80%;
-  max-width: 100vw;
+  max-width: 80%;
   background: #1d4f7d;
   border-radius: 8px;
   padding-top: 60px;
