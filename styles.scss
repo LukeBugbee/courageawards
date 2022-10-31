@@ -484,14 +484,16 @@ h3 {
   }
 
   .header {
+    // border: 1px solid red;
+    // margin-top: 60px;
     position: relative;
     text-align: center;
     .logo {
       position: absolute;
       transform: none;
-      top: 60px;
+      top: 15px;
       left: 50%;
-      transform: translateX(-50%);
+      transform: translateX(-50%) scale(0.7);
     }
     video {
       object-fit: cover;

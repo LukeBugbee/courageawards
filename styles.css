@@ -425,9 +425,9 @@ h3 {
   .header .logo {
     position: absolute;
     transform: none;
-    top: 60px;
+    top: 15px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) scale(0.7);
   }
   .header video {
     object-fit: cover;
