@@ -478,7 +478,6 @@ h3 {
     top: 15px;
     left: 50%;
     transform: translateX(-50%) scale(0.7);
-    display: none;
   }
   .header h2 {
     margin-bottom: 30px;
