@@ -234,13 +234,24 @@ h3 {
       font-family: "Spectral", serif;
     }
 
+    a {
+      font-family: "Spectral", serif;
+      font-style: inherit;
+      color: $brand-yellow;
+    }
+
+    a:hover {
+      opacity: 0.7;
+    }
+
     .key-info {
-      color: $brand-mustard;
+      color: $brand-yellow;
       font-size: 24px;
     }
 
     .secondary-info {
       font-size: 16px;
+
       color: white;
     }
   }
