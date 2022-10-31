@@ -109,6 +109,13 @@ h3 {
   overflow: hidden;
   padding: 60px;
   position: relative;
+
+  .subtitle {
+    color: $brand-mustard;
+    font-size: 32px;
+    margin-bottom: 60px;
+  }
+
   h1 {
     margin-bottom: 30px;
   }
