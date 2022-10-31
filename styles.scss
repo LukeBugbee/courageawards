@@ -126,10 +126,13 @@ h3 {
   }
 
   video {
-    width: 100%;
+    object-fit: cover;
+    object-position: bottom right;
+    width: 100vw;
+    height: 100vh;
     position: absolute;
-    left: 0px;
-    bottom: 0px;
+    top: 0;
+    right: 0;
     z-index: -100;
   }
 }
@@ -404,6 +407,7 @@ h3 {
 // ipad
 @media screen and (max-width: 1024px) {
   .main {
+    // border: 5px solid green;
   }
 
   .invite {
@@ -487,15 +491,7 @@ h3 {
       transform: translateX(-50%) scale(0.7);
       display: none;
     }
-    video {
-      object-fit: cover;
-      object-position: bottom right;
-      width: 100vw;
-      height: 100vh;
-      position: absolute;
-      top: 0;
-      right: 0;
-    }
+
     h2 {
       margin-bottom: 30px;
       font-size: 18px;
