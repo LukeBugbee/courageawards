@@ -484,8 +484,6 @@ h3 {
   }
 
   .header {
-    // border: 1px solid red;
-    // margin-top: 60px;
     position: relative;
     text-align: center;
     .logo {
@@ -550,6 +548,20 @@ h3 {
     .about-content {
       padding: 0px;
       width: 100%;
+    }
+  }
+  .event-info {
+    padding: 0px;
+    // border: 2px solid red;
+
+    .content {
+      // width: 100%;
+    }
+
+    .box-right {
+      img {
+        width: 100%;
+      }
     }
   }
 

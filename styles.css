@@ -483,6 +483,13 @@ h3 {
     width: 100%;
   }
 
+  .event-info {
+    padding: 0px;
+  }
+  .event-info .box-right img {
+    width: 100%;
+  }
+
   .footer .top-content {
     flex-direction: column;
     align-items: center;
