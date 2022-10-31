@@ -29,6 +29,7 @@ $brand-gray-text: #7e7e7e;
 .mobile-only {
   display: none;
 }
+
 .button:hover {
   cursor: pointer;
   opacity: 0.8;
@@ -42,7 +43,7 @@ h4 {
   font-weight: 100;
   line-height: 1.5;
 }
-.mobileonly {
+.mobile-only {
   display: none;
 }
 p {
@@ -407,7 +408,21 @@ h3 {
 // ipad
 @media screen and (max-width: 1024px) {
   .main {
-    // border: 5px solid green;
+    border: 5px solid green;
+  }
+  .video {
+    display: none;
+  }
+  .mobile-only {
+    display: flex;
+    object-fit: cover;
+    object-position: bottom right;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -100;
   }
 
   .invite {
@@ -452,6 +467,31 @@ h3 {
 
   .button {
     margin-bottom: 45px;
+  }
+
+  .about {
+    padding: 0px;
+    h2 {
+      font-size: 24px;
+    }
+    .content {
+      flex-direction: column-reverse;
+      padding: 60px 30px;
+    }
+
+    .about-content {
+      padding: 0px;
+      width: 100%;
+    }
+  }
+  .event-info {
+    padding: 0px;
+
+    .box-right {
+      img {
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -522,34 +562,6 @@ h3 {
   .hero-banner {
     height: 30vh;
     background-position: center center;
-  }
-
-  .about {
-    padding: 0px;
-    h2 {
-      font-size: 24px;
-    }
-    .content {
-      flex-direction: column-reverse;
-      padding: 60px 30px;
-    }
-
-    .about-content {
-      padding: 0px;
-      width: 100%;
-    }
-  }
-  .event-info {
-    padding: 0px;
-
-    .content {
-    }
-
-    .box-right {
-      img {
-        width: 100%;
-      }
-    }
   }
 
   .footer {

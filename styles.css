@@ -37,7 +37,7 @@ h4 {
   line-height: 1.5;
 }
 
-.mobileonly {
+.mobile-only {
   display: none;
 }
 
@@ -360,6 +360,26 @@ h3 {
 }
 
 @media screen and (max-width: 1024px) {
+  .main {
+    border: 5px solid green;
+  }
+
+  .video {
+    display: none;
+  }
+
+  .mobile-only {
+    display: flex;
+    object-fit: cover;
+    object-position: bottom right;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -100;
+  }
+
   .invite .content {
     display: flex;
     flex-direction: column;
@@ -396,6 +416,28 @@ h3 {
 
   .button {
     margin-bottom: 45px;
+  }
+
+  .about {
+    padding: 0px;
+  }
+  .about h2 {
+    font-size: 24px;
+  }
+  .about .content {
+    flex-direction: column-reverse;
+    padding: 60px 30px;
+  }
+  .about .about-content {
+    padding: 0px;
+    width: 100%;
+  }
+
+  .event-info {
+    padding: 0px;
+  }
+  .event-info .box-right img {
+    width: 100%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -459,28 +501,6 @@ h3 {
   .hero-banner {
     height: 30vh;
     background-position: center center;
-  }
-
-  .about {
-    padding: 0px;
-  }
-  .about h2 {
-    font-size: 24px;
-  }
-  .about .content {
-    flex-direction: column-reverse;
-    padding: 60px 30px;
-  }
-  .about .about-content {
-    padding: 0px;
-    width: 100%;
-  }
-
-  .event-info {
-    padding: 0px;
-  }
-  .event-info .box-right img {
-    width: 100%;
   }
 
   .footer .top-content {
