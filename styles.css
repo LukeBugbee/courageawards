@@ -511,6 +511,10 @@ h3 {
     background-position: center center;
   }
 
+  .footer {
+    padding: 15px;
+    text-align: center;
+  }
   .footer .top-content {
     flex-direction: column;
     align-items: center;
@@ -528,6 +532,10 @@ h3 {
     transform: none;
     flex-direction: column;
     margin-bottom: 30px;
+    text-align: center;
+  }
+  .footer .bottom-content .weblink {
+    margin: 15px 0px 15px 0px;
   }
 
   .row .content {
