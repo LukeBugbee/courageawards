@@ -43,7 +43,7 @@ h4 {
   font-weight: 100;
   line-height: 1.5;
 }
-.mobile-only {
+.mobile-only-hero {
   display: none;
 }
 p {
@@ -284,12 +284,16 @@ h3 {
 
 // about
 .about {
+  background: #fff8f0;
   .content {
     display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 60px;
     background: #fff8f0;
     border-radius: 6px;
   }
+
   h2 {
     color: $brand-blue;
     margin-bottom: 30px;
@@ -299,12 +303,9 @@ h3 {
   .about-content {
     flex-grow: 1;
     padding-right: 60px;
-    width: 65%;
-  }
-
-  video {
-    flex-grow: 1;
-    height: 350px;
+    width: 50%;
+    max-width: 800px;
+    // border: 1px solid red;
   }
 }
 
@@ -408,12 +409,14 @@ h3 {
 // ipad
 @media screen and (max-width: 1024px) {
   .main {
-    border: 5px solid green;
+    // border: 5px solid green;
   }
-  .video {
+
+  video {
     display: none;
   }
-  .mobile-only {
+
+  .mobile-only-hero {
     display: flex;
     object-fit: cover;
     object-position: bottom right;
@@ -423,6 +426,10 @@ h3 {
     top: 0;
     right: 0;
     z-index: -100;
+  }
+
+  .mobile-only-statue {
+    width: 200px;
   }
 
   .invite {
@@ -471,6 +478,7 @@ h3 {
 
   .about {
     padding: 0px;
+    position: relative;
     h2 {
       font-size: 24px;
     }

@@ -37,7 +37,7 @@ h4 {
   line-height: 1.5;
 }
 
-.mobile-only {
+.mobile-only-hero {
   display: none;
 }
 
@@ -256,8 +256,13 @@ h3 {
   background-size: cover;
 }
 
+.about {
+  background: #fff8f0;
+}
 .about .content {
   display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 60px;
   background: #fff8f0;
   border-radius: 6px;
@@ -270,11 +275,8 @@ h3 {
 .about .about-content {
   flex-grow: 1;
   padding-right: 60px;
-  width: 65%;
-}
-.about video {
-  flex-grow: 1;
-  height: 350px;
+  width: 50%;
+  max-width: 800px;
 }
 
 .joequote {
@@ -360,15 +362,11 @@ h3 {
 }
 
 @media screen and (max-width: 1024px) {
-  .main {
-    border: 5px solid green;
-  }
-
-  .video {
+  video {
     display: none;
   }
 
-  .mobile-only {
+  .mobile-only-hero {
     display: flex;
     object-fit: cover;
     object-position: bottom right;
@@ -378,6 +376,10 @@ h3 {
     top: 0;
     right: 0;
     z-index: -100;
+  }
+
+  .mobile-only-statue {
+    width: 200px;
   }
 
   .invite .content {
@@ -420,6 +422,7 @@ h3 {
 
   .about {
     padding: 0px;
+    position: relative;
   }
   .about h2 {
     font-size: 24px;
