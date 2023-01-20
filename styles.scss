@@ -2,7 +2,8 @@
   box-sizing: border-box;
   margin: 0px;
   padding: 0px;
-  font-family: "Inter", sans-serif;
+  font-family: "Spectral", serif;
+  // font-family: "Inter", sans-serif;
 }
 
 $brand-blue: #1d4f7d;
@@ -39,15 +40,21 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: "Spectral", serif;
   font-weight: 100;
   line-height: 1.5;
 }
+
+h1 {
+  font-size: 100px;
+  line-height: 1;
+  margin: 45px 0px;
+}
+
 .mobile-only-hero {
   display: none;
 }
 p {
-  font-size: 18px;
+  font-size: 24px;
   line-height: 1.5;
 }
 
@@ -57,18 +64,8 @@ a:visited {
   color: inherit;
 }
 
-.label {
-  color: white;
-  opacity: 0.5;
-  font-size: 20px;
-  font-style: italic;
-  font-family: "Spectral", serif;
-}
-
-h1 {
-  font-size: 120px;
-  line-height: 1;
-  color: $brand-blue;
+.mustard {
+  color: $brand-yellow;
 }
 
 .quote-text {
@@ -76,17 +73,22 @@ h1 {
   font-style: italic;
 }
 
-.quote-attribution {
-  font-size: 20px;
-  font-weight: 100;
-  font-style: normal;
-}
-
 h3 {
   font-size: 28px;
-  margin-bottom: 18px;
-  color: $brand-blue;
+  margin-bottom: 30px;
 }
+
+.mustard {
+  margin-bottom: 10px;
+  line-height: 0.5;
+}
+
+.subdued {
+  font-size: 28;
+  font-style: italic;
+  opacity: 0.5;
+}
+
 .main {
   display: flex;
   flex-direction: column;
@@ -107,16 +109,23 @@ h3 {
 
 // header
 .header {
-  height: 95vh;
+  min-height: 95vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   overflow: hidden;
   padding: 60px;
   position: relative;
+  background-color: $brand-blue;
+  color: white;
+
+  // center everything, looks better
+  text-align: center;
+  align-items: center;
 
   h1 {
     margin-bottom: 30px;
+    color: white;
   }
 
   .logo {
@@ -126,7 +135,15 @@ h3 {
     left: 60px;
   }
 
+  .header-content {
+    z-index: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   video {
+    mix-blend-mode: multiply;
     object-fit: cover;
     object-position: bottom right;
     width: 100vw;
@@ -134,141 +151,40 @@ h3 {
     position: absolute;
     top: 0;
     right: 0;
-    z-index: -100;
+    z-index: 400;
   }
-}
-
-// invite
-.invite {
-  padding: 120px 60px;
-  #columnTop {
-    position: absolute;
-    width: 180px;
-    left: 30px;
-    top: 30px;
+  .divider-line {
+    height: 1px;
+    width: 650px;
+    max-width: 90vw;
+    background-color: white;
+    opacity: 0.33;
+    margin: 30px 0px;
   }
 
-  #columnBottom {
-    position: absolute;
-    width: 120px;
-    right: 30px;
-    bottom: 30px;
-  }
-  .content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 120px 30px;
-    border-radius: 6px;
-    box-shadow: 0px 5px 30px rgba(0, 50, 100, 0.2);
-    width: 80%;
-    max-width: 80%;
-
-    .invite-text {
-      font-size: 24px;
-      width: 70%;
-      color: $brand-blue;
-      margin-bottom: 30px;
-    }
-    .cta-text {
-      font-family: "Spectral", serif;
-      font-weight: 100;
-      line-height: 1;
-      font-style: italic;
-      color: $brand-mustard;
-      font-size: 24px;
-    }
-  }
-}
-
-// quote
-.quote {
-  background-color: $brand-blue;
-  color: white;
-  font-style: italic;
-  text-align: center;
-  padding: 90px 60px;
-}
-// description
-.description {
-  position: relative;
-}
-
-// event-info
-.event-info {
-  padding: 120px 60px;
-  text-align: center;
-  h2 {
-    color: white;
-    margin-bottom: 60px;
-    font-size: 28px;
+  .divider-line:nth-of-type(3) {
   }
 
-  .content {
-    display: flex;
-    flex-direction: column;
-    width: 80%;
-    max-width: 80%;
-    background: $brand-blue;
-    border-radius: 8px;
-    padding-top: 60px;
-  }
-  .content-boxes {
+  .speaker-info {
     display: flex;
     flex-direction: row;
-  }
-
-  .subbox {
-    display: flex;
-    width: 50%;
-  }
-
-  .box-left {
-    flex-direction: column;
+    font-size: 35px;
+    color: $brand-yellow;
     align-items: center;
-  }
-
-  .infobox {
-    margin-bottom: 30px;
-    p {
-      font-family: "Spectral", serif;
+    text-align: left;
+    h2 {
+      margin-left: 15px;
+      line-height: 1;
     }
 
-    a {
-      font-family: "Spectral", serif;
-      font-style: inherit;
-      color: $brand-yellow;
-    }
-
-    a:hover {
-      opacity: 0.7;
-    }
-
-    .key-info {
-      color: $brand-yellow;
-      font-size: 24px;
-    }
-
-    .secondary-info {
-      font-size: 16px;
-
-      color: white;
+    .mustard {
+      margin-bottom: 15px;
     }
   }
 
-  .box-right {
-    display: flex;
-    flex-direction: column;
-
-    img {
-      transform: translate(30px, 30px);
-    }
-
-    .label {
-      text-align: center;
-    }
+  .desantis-portrait {
+    width: 150px;
+    height: 150px;
   }
 }
 
@@ -285,115 +201,59 @@ h3 {
 // about
 .about {
   background: #fff8f0;
+  // position: relative;
   .content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 60px;
-    background: #fff8f0;
-    border-radius: 6px;
-  }
-
-  h2 {
-    color: $brand-blue;
-    margin-bottom: 30px;
-    font-size: 28px;
-  }
-
-  .about-content {
-    flex-grow: 1;
-    padding-right: 60px;
-    width: 50%;
-    max-width: 800px;
-    // border: 1px solid red;
-  }
-}
-
-// joe quote
-.joequote {
-  color: white;
-  flex-direction: column;
-  display: flex;
-  align-items: center;
-
-  h2 {
-    margin-bottom: 30px;
-  }
-  .content {
+    position: relative;
     display: flex;
     flex-direction: column;
-    align-items: center;
-  }
-  .cta-box {
-    margin-top: 60px;
-    background: $brand-lightblue;
-    display: flex;
     justify-content: center;
-    text-align: center;
-    padding: 30px 60px;
-    max-width: 800px;
-    border-radius: 2px;
-
-    a {
-      color: white;
-      font-family: "Spectral", serif;
-      font-style: italic;
-      text-decoration: underline;
-      font-weight: 300;
-    }
-    a:hover {
-      opacity: 0.5;
-    }
-    p {
-      opacity: 0.7;
-      font-family: "Spectral", serif;
-      font-style: italic;
-      font-size: 20px;
-    }
-  }
-}
-
-// footer
-.footer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: #f2f3f4;
-  .top-content {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    padding-left: 120px;
-    justify-content: space-around;
-    margin-bottom: 120px;
+    padding: 60px;
+    border-radius: 6px;
+    text-align: left;
   }
 
-  .quote-content {
-    padding-left: 30px;
-    width: 50%;
-    color: #6c6c6c;
+  .about-heading {
+    color: $brand-mustard;
   }
 
-  h2 {
+  .description-block {
     margin-bottom: 30px;
-    line-height: 1.3;
+    max-width: 650px;
   }
 
-  .bottom-content {
+  p {
+    color: $brand-blue;
+    font-style: italic;
+    font-weight: 100;
+  }
+  a {
+    color: #46a8d7;
+    text-decoration: underline;
+  }
+
+  .column-image {
+    width: 300px;
+    position: absolute;
+    right: 120px;
+  }
+
+  #column-top {
+    top: 30px;
+  }
+
+  #column-bottom {
+    bottom: 120px;
+  }
+
+  .about-footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 0px 60px;
-    p {
-      color: #7e7e7e;
-      margin: 0px;
-    }
+    margin-top: 60px;
+
     h3 {
-      font-style: italic;
       font-size: 20px;
-      margin: 0px;
+      font-style: italic;
     }
   }
 }
@@ -408,10 +268,6 @@ h3 {
 
 // ipad
 @media screen and (max-width: 1024px) {
-  .main {
-    // border: 5px solid green;
-  }
-
   video {
     display: none;
   }
@@ -426,37 +282,6 @@ h3 {
     top: 0;
     right: 0;
     z-index: -100;
-  }
-
-  .mobile-only-statue {
-    width: 200px;
-  }
-
-  .invite {
-    .content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      padding: 15px 30px;
-    }
-    .column-image {
-      margin: 0px;
-      display: flex;
-    }
-    #columnTop {
-      position: inherit;
-      left: auto;
-      top: auto;
-      margin-bottom: 30px;
-    }
-
-    #columnBottom {
-      margin-top: 30px;
-      position: inherit;
-      right: auto;
-      bottom: auto;
-    }
   }
 
   .event-info {
@@ -477,35 +302,6 @@ h3 {
   .button {
     margin-bottom: 45px;
   }
-
-  .about {
-    padding: 0px;
-    position: relative;
-    h2 {
-      font-size: 24px;
-    }
-    .content {
-      flex-direction: column-reverse;
-      padding: 60px 30px;
-    }
-
-    .about-content {
-      padding: 0px;
-      width: 100%;
-    }
-  }
-  .event-info {
-    padding: 0px;
-
-    .box-right {
-      img {
-        width: 100%;
-      }
-    }
-  }
-}
-
-.footer {
 }
 
 //   mobile
@@ -526,6 +322,10 @@ h3 {
     font-size: 24px;
   }
 
+  h3 {
+    font-size: 20px;
+  }
+
   p {
     font-size: 16px;
   }
@@ -533,13 +333,14 @@ h3 {
   .header {
     position: relative;
     text-align: center;
+    padding: 60px 0px;
+
     .logo {
       position: absolute;
       transform: none;
       top: 15px;
       left: 50%;
       transform: translateX(-50%) scale(0.7);
-      // display: none;
     }
 
     h2 {
@@ -547,26 +348,17 @@ h3 {
       font-size: 18px;
     }
 
-    .quote-text {
-      font-size: 24px;
-    }
-  }
+    .speaker-info {
+      flex-direction: column;
+      text-align: center;
+      h2 {
+        font-size: 32px;
+        margin: 0px;
+      }
 
-  .quote {
-    padding: 30px;
-  }
-
-  .invite {
-    padding: 0px;
-  }
-  .invite .content .invite-text {
-    width: 100%;
-  }
-
-  .event-info {
-    padding: 0px;
-    h2 {
-      font-size: 24px;
+      .desantis-portrait {
+        margin-bottom: 30px;
+      }
     }
   }
 
@@ -575,37 +367,32 @@ h3 {
     background-position: center center;
   }
 
-  .footer {
-    // padding: 15px;
-    padding: 15px;
-    text-align: center;
-    .top-content {
-      flex-direction: column;
-      align-items: center;
-      padding: 60px 30px;
-      img {
-        width: 250px;
-        margin-bottom: 30px;
-      }
-    }
-
-    .quote-content {
-      padding: 0px;
-      width: 100%;
-    }
-
-    .bottom-content {
-      transform: none;
-      flex-direction: column;
-      margin-bottom: 30px;
-      text-align: center;
-      .weblink {
-        margin: 15px 0px 15px 0px;
-      }
-    }
-  }
-
   .row .content {
     border-radius: 0px;
+  }
+
+  .about {
+    padding: 300px 0px;
+    .column-image {
+      width: 150px;
+      position: absolute;
+    }
+
+    #column-top {
+      top: 0px;
+      transform: translateY(-200px);
+    }
+
+    #column-bottom {
+      bottom: 15px;
+      // width: 200px;
+      transform: translateY(200px);
+    }
+
+    .about-footer {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
   }
 }
