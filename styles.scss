@@ -284,21 +284,6 @@ h3 {
     z-index: -100;
   }
 
-  .event-info {
-    padding: 0px;
-
-    .content-boxes {
-      flex-direction: column;
-    }
-    .infobox {
-      width: 100%;
-    }
-
-    .subbox {
-      width: 100%;
-    }
-  }
-
   .button {
     margin-bottom: 45px;
   }
@@ -333,7 +318,7 @@ h3 {
   .header {
     position: relative;
     text-align: center;
-    padding: 60px 0px;
+    padding: 60px 30px;
 
     .logo {
       position: absolute;
@@ -372,21 +357,22 @@ h3 {
   }
 
   .about {
-    padding: 300px 0px;
+    // padding: 300px 0px;
     .column-image {
       width: 150px;
       position: absolute;
+      margin-left: 50%;
+      display: none;
     }
 
     #column-top {
       top: 0px;
-      transform: translateY(-200px);
+      transform: translate(-50%, -200px);
     }
 
     #column-bottom {
       bottom: 15px;
-      // width: 200px;
-      transform: translateY(200px);
+      transform: translate(-50%, 200px);
     }
 
     .about-footer {
